@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://localhost:3000/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+<body>
+    <div class="header-container">
+        <div class="header">
+            <div class="logo"></div>
+            <div class="home">
+                <img src="http://localhost:3000/icon/home.png" style="margin-right: 2px;">
+                <span>Home</span>
+            </div>
+            <div class="wrapper-gametype">
+                    <div class="game-type">
+                            <img src="http://localhost:3000/icon/gamecata.png" style="margin-right: 4px;">
+                            <span>Thể loại game</span>
+                            <div class="gametype-item">
+                                    <a href="#">Hành động</a>
+                                    <a href="#">Puzzle</a>
+                                    <a href="#">Bắn súng</a>
+                                    <a href="#">Racing</a>
+                                    <a href="#">Game ARPG</a>
+                                    <a href="#">Casual</a>
+                                    <a href="#">Game RPG</a>
+                                    <a href="#">Strategy</a>
+                                    <a href="#">Sport</a>
+                                    <a href="#">Adventure</a>
+                            </div>
+                    </div>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search game">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+            {{!-- <div class="header-button">
+                <div class="download">
+                    <img style="background: none; margin-right: 4px;" width="12px" height="12px" src="icon/download.png">
+                    <span>Tải phần mềm</span>
+                </div>
+                <div class="account">
+                    <div class="my-account">
+                        <img src="http://localhost:3000/icon/avatar.png">
+                        <span>My Account</span>
+                        <div class="profile">
+                            <div class="acc">
+                                <img src="http://localhost:3000/icon/avatar.png">
+                                <div class="username">TuanlvEC</div>  
+                            </div>                
+                            <div class="balance">
+                                <div class="available">
+                                    <span>Số dư khả dụng</span>
+                                    <span>300.000 đ</span>
+                                </div>               
+                                <div class="pendding">
+                                    <span>Số dư Pendding</span>
+                                    <span>700.000 đ</span>
+                                </div>
+                            </div>               
+                            <div class="nav">
+                                <a href="#">Quản lý shop</a>
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </div>
+                            <div class="nav">
+                                 <a href="#">Lịch sử giao dịch</a>
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </div>
+                            <div class="nav">
+                                <a href="#">Nạp tiền</a>
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </div>
+                            <div class="nav">
+                                <a href="#">Đăng xuất</a>
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </div>                               
+                        </div>
+                    </div>
+                </div>
+                <div class="favorite">
+                    <span class="badge">1</span>
+                    <i style="color: #2CBCFC; margin-right: 5px;" class="fa fa-heart" aria-hidden="true"></i>
+                    <span>Yêu thích</span>
+                </div>
+            </div> --}}
+    
+        </div> <!--end header-->
+    </div> <!--end header-container-->
+    <div class="support">
+        <div class="tutorial">
+            <img width="35px" height="35px" src="icon/tutorial.png">
+            <p>Hướng dẫn</p>
+        </div>
+        <div class="messenger">
+            <img width="35px" height="35px" src="icon/messenger.png">
+            <p>Hỗ trợ</p>
+        </div>
+    </div> <!--end support-->
+    <div class="content-container">
+        <div class="content-wraper">
+        	<div class="login">
+        		<form method="POST">
+        			<h6>Tên đăng nhập</h6>
+        			<input id="username" type="text" name="username">
+        			<h6>Mật khẩu</h6>
+        			<input id="password" type="password" name="password">
+                    <input type="submit" value="Đăng nhập">
+                    <input type="submit" value="Đăng ký" 
+                        formmethod="GET"
+                        formaction="http://localhost:3000/account/register"> 
+        			{{!-- <BUTTON>Đăng nhập</BUTTON>
+                    <BUTTON>Đăng ký</BUTTON> --}}
+        		</form>
+        	</div>
+        </div> 
+    </div> <!--end content-container-->
+
+    <div class="footer-container">
+        <div class="footer">
+                <div class="info">
+                    <span>Thông tin</span><br>
+                    <a href="#">Giới thiệu về Divine Shop</a><br>
+                    <a href="#">Chính sách bảo mật</a><br>
+                    <a href="#">Điều khoản dịch vụ</a>
+                </div>
+                <div class="service">
+                        <span>Chăm sóc khách hàng</span><br>
+                        <a href="#">Liên hệ</a><br>
+                        <a href="#">Chế độ bảo hành</a>
+                </div>
+                <div class="contact">
+                        <span>Liên hệ</span><br>
+                        <a href="#">Địa chỉ: 110 Trần Phú - hà Đông - Hà Nội</a><br>
+                        <a href="#">Hotline: 0974.947.421 (24/7)</a><br>
+                        <span>Kết nối</span>
+                        <div class="social-network">
+                            <img height="15px" width="15px" src="icon/facebook.png" style="margin-right: 10px; cursor: pointer;">
+                            <i style="color: white; font-size: 20px; margin-right: 10px; cursor: pointer;" class="fa fa-youtube-play" aria-hidden="true"></i>
+                            <img style="cursor: pointer;" height="15px" width="15px" src="icon/google.png">
+                        </div>
+                </div>
+                <div class="facebook">
+                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=300&height=300&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+                        style="border:none;overflow:hidden"
+                        scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                </div>
+        </div>   
+        <div class="footer-bottom">
+            <span class="copyright">© Copyright 2019 DTS Group</span> 
+            <img src="icon/bct.png">
+        </div>
+    </div> <!--end footer-container-->
+    
+
+
+
+
+</body>
+</html>

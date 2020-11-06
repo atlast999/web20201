@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<span lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://localhost:3000/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+<body>
+    <div class="header-container">
+        <div class="header">
+            <div class="logo"></div>
+            <div class="home">
+                <img src="icon/home.png" style="margin-right: 2px;">
+                <span>Home</span>
+            </div>
+            <div class="wrapper-gametype">
+                    <div class="game-type">
+                            <img src="icon/gamecata.png" style="margin-right: 4px;">
+                            <span>Thể loại game</span>
+                            <div class="gametype-item">
+                                    <a href="#">Hành động</a>
+                                    <a href="#">Puzzle</a>
+                                    <a href="#">Bắn súng</a>
+                                    <a href="#">Racing</a>
+                                    <a href="#">Game ARPG</a>
+                                    <a href="#">Casual</a>
+                                    <a href="#">Game RPG</a>
+                                    <a href="#">Strategy</a>
+                                    <a href="#">Sport</a>
+                                    <a href="#">Adventure</a>
+                                </div>
+                        </div>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search game">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+            <div class="header-button">
+                {{!-- <div class="download">
+                    <img style="background: none; margin-right: 4px;" width="12px" height="12px" src="icon/download.png">
+                    <span>Tải phần mềm</span>
+                </div> --}}
+                <a href="/account/login">
+                    <div class="my-account">
+                    <img style="background: none; margin-right: 4px;" width="12px" height="12px" src="icon/account.png">
+                    <span>My Account</span>
+                    </div>
+                </a>
+                <div class="cart">
+                    <span class="badge">1</span>
+                    <i style="color: #2CBCFC; margin-right: 5px;" class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <span>Giỏ Hàng</span>
+                </div>
+            </div>
+    
+        </div> <!--end header-->
+    </div> <!--end header-container-->
+    <div class="support">
+        <div class="tutorial">
+            <img width="35px" height="35px" src="icon/tutorial.png">
+            <p>Hướng dẫn</p>
+        </div>
+        <div class="messenger">
+            <img width="35px" height="35px" src="icon/messenger.png">
+            <p>Hỗ trợ</p>
+        </div>
+    </div> <!--end support-->
+
+    <div class="banner">
+        <div class="overlay-banner"></div>
+        <div class="wrapper">
+            <span style="color: white;"><h1>METAL GEAR RISING REVENGEANCE</h1></span>        
+            <p>
+                <span style="color: #E0E9EF; font-size: 16px;">Metal Gear Rising Revengeance là một game hành động chặt chém (hack và slash) được phát triển bởi Platinum Games và sản xuất bởi Kojima Productions.</span>
+            </p>
+            <a href="#">Chi tiết</a>
+        </div>
+        
+    </div> <!--end banner-->
+    <div class="container">
+            <div class="menu">
+                <span style="padding: 8px 16px; color: #35BEFC;">GAME FLATFORM</span>
+                <div class="steam flex menu-active">
+                    <img width="20px" height="20px" src="icon/steam.png">
+                    <span>Steam</span>
+                </div>
+                <div class="origin flex">
+                    <img width="20px" height="20px" src="icon/Origin.png">
+                    <span>Origin</span>
+                </div>
+                <div class="uplay flex">
+                    <img width="20px" height="20px" src="icon/Uplay-icon.png">
+                    <span>Uplay</span>
+                </div>
+                <div class="ubiisoft flex">
+                    <img width="25px" height="20px" src="icon/Ubiisoft_logo.png">
+                    <span>Ubiisoft</span>
+                </div>
+                <div class="gog flex">
+                    <img width="20px" height="20px"src="icon/steam.png">
+                    <span>GOG</span>
+                </div>
+                <div class="blizzard flex">
+                    <img width="50px" height="30px" src="icon/blizzard.png">
+                    <span>Blizzard</span>
+                </div>
+            </div>
+            <div class="content">
+                <div class="container-sort">
+                    <span>Sắp xếp theo</span>
+                    <div class="sort">
+                        <select>
+                            <option value="0">Mặc định</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                            <option value="4">Option 4</option>
+                        </select>
+                    </div>
+                </div>
+                <!--end container-sort-->
+                <div class="content-main">
+                        <div class="game-item" style="background-image: url('gamebg/bg11.jpg');">
+                                <span class="discount">-70%</span>
+                                <div class="overlay">
+                                        <div class="info-game">
+                                            <span style="color: white; font-size: 14px;">Fortnite Battle Royale</span>           
+                                            <span style="color: #EB7F02; font-size: 8px;"><del>1.700.000 VND</del></span>        
+                                            <span style="color: #EB7F02; font-size: 10px;">700.000 VND</span>
+                                        </div>
+                                        <div class="like-buy-game">
+                                            
+                                            <i style="color: red; margin-right: 10px; font-size: 12px;" class="fa fa-heart" aria-hidden="true"></i>
+                                            
+                                            <a href="">Thêm vào giỏ</a>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="game-item" style="background-image: url('gamebg/bg4.jpg');">
+                                <span class="discount">-70%</span>
+                                <div class="overlay">
+                                        <div class="info-game">
+                                            <span style="color: white; font-size: 14px;">Battlegrounds</span>           
+                                            <span style="color: #EB7F02; font-size: 8px;"><del>1.700.000 VND</del></span>        
+                                            <span style="color: #EB7F02; font-size: 10px;">700.000 VND</span>
+                                        </div>
+                                        <div class="like-buy-game">
+                                            
+                                            <i style="color: red; margin-right: 10px; font-size: 12px;" class="fa fa-heart" aria-hidden="true"></i>
+                                            
+                                            <a href="">Thêm vào giỏ</a>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="game-item" style="background-image: url('gamebg/bg10.jpg');">
+                                <span class="discount">-70%</span>
+                                <div class="overlay">
+                                        <div class="info-game">
+                                            <span style="color: white; font-size: 14px;">The Elsweyr</span>           
+                                            <span style="color: #EB7F02; font-size: 8px;"><del>1.700.000 VND</del></span>        
+                                            <span style="color: #EB7F02; font-size: 10px;">700.000 VND</span>
+                                        </div>
+                                        <div class="like-buy-game">
+                                            
+                                            <i style="color: red; margin-right: 10px; font-size: 12px;" class="fa fa-heart" aria-hidden="true"></i>
+                                            
+                                            <a href="">Thêm vào giỏ</a>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="game-item" style="background-image: url('gamebg/bg15.jpg');">
+                                <span class="discount">-70%</span>
+                                <div class="overlay">
+                                        <div class="info-game">
+                                            <span style="color: white; font-size: 14px;">God Of War</span>           
+                                            <span style="color: #EB7F02; font-size: 8px;"><del>1.700.000 VND</del></span>        
+                                            <span style="color: #EB7F02; font-size: 10px;">700.000 VND</span>
+                                        </div>
+                                        <div class="like-buy-game">
+                                            
+                                            <i style="color: red; margin-right: 10px; font-size: 12px;" class="fa fa-heart" aria-hidden="true"></i>
+                                            
+                                            <a href="">Thêm vào giỏ</a>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="game-item" style="background-image: url('gamebg/bg6.jpg');">
+                                <span class="discount">-70%</span>
+                                <div class="overlay">
+                                        <div class="info-game">
+                                            <span style="color: white; font-size: 14px;">Pirate's Treasure</span>           
+                                            <span style="color: #EB7F02; font-size: 8px;"><del>1.700.000 VND</del></span>        
+                                            <span style="color: #EB7F02; font-size: 10px;">700.000 VND</span>
+                                        </div>
+                                        <div class="like-buy-game">
+                                            
+                                            <i style="color: red; margin-right: 10px; font-size: 12px;" class="fa fa-heart" aria-hidden="true"></i>
+                                            
+                                            <a href="">Thêm vào giỏ</a>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="game-item" style="background-image: url('gamebg/bg7.png');">
+                                <span class="discount">-70%</span>
+                                <div class="overlay">
+                                        <div class="info-game">
+                                            <span style="color: white; font-size: 14px;">God Of War</span>           
+                                            <span style="color: #EB7F02; font-size: 8px;"><del>1.700.000 VND</del></span>        
+                                            <span style="color: #EB7F02; font-size: 10px;">700.000 VND</span>
+                                        </div>
+                                        <div class="like-buy-game">
+                                            
+                                            <i style="color: red; margin-right: 10px; font-size: 12px;" class="fa fa-heart" aria-hidden="true"></i>
+                                            
+                                            <a href="">Thêm vào giỏ</a>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="game-item" style="background-image: url('gamebg/bg8.jpg');">
+                                <span class="discount">-70%</span>
+                                <div class="overlay">
+                                        <div class="info-game">
+                                            <span style="color: white; font-size: 14px;">Tomb Raider</span>           
+                                            <span style="color: #EB7F02; font-size: 8px;"><del>1.700.000 VND</del></span>        
+                                            <span style="color: #EB7F02; font-size: 10px;">700.000 VND</span>
+                                        </div>
+                                        <div class="like-buy-game">
+                                            
+                                            <i style="color: red; margin-right: 10px; font-size: 12px;" class="fa fa-heart" aria-hidden="true"></i>
+                                            
+                                            <a href="">Thêm vào giỏ</a>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="game-item">
+                                <span class="discount">-70%</span>
+                                <div class="overlay">
+                                        <div class="info-game">
+                                            <span style="color: white; font-size: 14px;">God Of War</span>           
+                                            <span style="color: #EB7F02; font-size: 8px;"><del>1.700.000 VND</del></span>        
+                                            <span style="color: #EB7F02; font-size: 10px;">700.000 VND</span>
+                                        </div>
+                                        <div class="like-buy-game">
+                                            
+                                            <i style="color: red; margin-right: 10px; font-size: 12px;" class="fa fa-heart" aria-hidden="true"></i>
+                                            
+                                            <a href="">Thêm vào giỏ</a>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="game-item" style="background-image: url('gamebg/bg4.jpg');">
+                                <span class="discount">-70%</span>
+                                <div class="overlay">
+                                        <div class="info-game">
+                                            <span style="color: white; font-size: 14px;">Battlegrounds</span>           
+                                            <span style="color: #EB7F02; font-size: 8px;"><del>1.700.000 VND</del></span>        
+                                            <span style="color: #EB7F02; font-size: 10px;">700.000 VND</span>
+                                        </div>
+                                        <div class="like-buy-game">
+                                            
+                                            <i style="color: red; margin-right: 10px; font-size: 12px;" class="fa fa-heart" aria-hidden="true"></i>
+                                            
+                                            <a href="">Thêm vào giỏ</a>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="game-item" style="background-image: url('gamebg/bg9.jpg');">
+                                <span class="discount">-70%</span>
+                                <div class="overlay">
+                                        <div class="info-game">
+                                            <span style="color: white; font-size: 14px;">Assassin's Creed IV</span>           
+                                            <span style="color: #EB7F02; font-size: 8px;"><del>1.700.000 VND</del></span>        
+                                            <span style="color: #EB7F02; font-size: 10px;">700.000 VND</span>
+                                        </div>
+                                        <div class="like-buy-game">
+                                            
+                                            <i style="color: red; margin-right: 10px; font-size: 12px;" class="fa fa-heart" aria-hidden="true"></i>
+                                            
+                                            <a href="">Thêm vào giỏ</a>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="game-item" style="background-image: url('gamebg/bg2.jpg');">
+                                <span class="discount">-70%</span>
+                                <div class="overlay">
+                                        <div class="info-game">
+                                            <span style="color: white; font-size: 14px;">Ring Of Elysium</span>           
+                                            <span style="color: #EB7F02; font-size: 8px;"><del>1.700.000 VND</del></span>        
+                                            <span style="color: #EB7F02; font-size: 10px;">700.000 VND</span>
+                                        </div>
+                                        <div class="like-buy-game">
+                                            
+                                            <i style="color: red; margin-right: 10px; font-size: 12px;" class="fa fa-heart" aria-hidden="true"></i>
+                                            
+                                            <a href="">Thêm vào giỏ</a>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="game-item" style="background-image: url('gamebg/bg14.jpg');">
+                                <span class="discount">-70%</span>
+                                <div class="overlay">
+                                        <div class="info-game">
+                                            <span style="color: white; font-size: 14px;">God Of War</span>           
+                                            <span style="color: #EB7F02; font-size: 8px;"><del>1.700.000 VND</del></span>        
+                                            <span style="color: #EB7F02; font-size: 10px;">700.000 VND</span>
+                                        </div>
+                                        <div class="like-buy-game">
+                                            
+                                            <i style="color: red; margin-right: 10px; font-size: 12px;" class="fa fa-heart" aria-hidden="true"></i>
+                                            
+                                            <a href="">Thêm vào giỏ</a>
+                                        </div>
+                                </div>
+                        </div>                  
+                </div> <!--end content-main-->
+                <div class="pagination">
+                    <a class="active" href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <span style="color: white;">...</span>
+                    <a href="#">16</a>
+                    <a href="#">Next</a>
+                </div> <!--end pagination-->
+            </div>
+            <div class="top-game">
+                <div class="active-div"><span>Top thuê game nhiều</span></div>
+                <div><span>TOP game mới được thuê gần nhất</span></div>
+                <div><span>TOP game mới nhất</span></div>
+            </div> <!--end top-game-->
+            <div class="content-moregame clearfix">
+                <div class="slide">
+                    <div class="previous">
+                            <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    </div>
+                    <div class="next">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </div>
+                    <div class="info-slide">
+                        <span><h3>Tomb Clancy's Special Edition</h3></span>
+                        <span style="color: #C7C6C6; text-shadow: -1px -1px 1px black; font-size: 14px;">Metal Gear Rising Revengeance là một game hành động chặt chém (hack và slash) được phát triển bởi Platinum Games và sản xuất bởi Kojima</span> 
+                    </div>
+                </div> <!--end slide-->
+                <div class="list-game">
+                    <div class="game-item" style="background-image: url('gamebg/bg11.jpg');">
+                            <span class="discount">-70%</span>
+                            <div class="overlay">
+                                    <div class="info-game">
+                                        <span style="color: white; font-size: 14px;">Fortnite Battle Royale</span>           
+                                        <span style="color: #EB7F02; font-size: 8px;"><del>1.700.000 VND</del></span>        
+                                        <span style="color: #EB7F02; font-size: 10px;">700.000 VND</span>
+                                    </div>
+                                    <div class="like-buy-game">
+                                        
+                                        <i style="color: red; margin-right: 10px; font-size: 12px;" class="fa fa-heart" aria-hidden="true"></i>
+                                        
+                                        <a href="">Thêm vào giỏ</a>
+                                    </div>
+                            </div>
+                    </div>
+                    <div class="game-item" style="background-image: url('gamebg/bg4.jpg');">
+                            <span class="discount">-70%</span>
+                            <div class="overlay">
+                                    <div class="info-game">
+                                        <span style="color: white; font-size: 14px;">Battlegrounds</span>           
+                                        <span style="color: #EB7F02; font-size: 8px;"><del>1.700.000 VND</del></span>        
+                                        <span style="color: #EB7F02; font-size: 10px;">700.000 VND</span>
+                                    </div>
+                                    <div class="like-buy-game">
+                                        
+                                        <i style="color: red; margin-right: 10px; font-size: 12px;" class="fa fa-heart" aria-hidden="true"></i>
+                                        
+                                        <a href="">Thêm vào giỏ</a>
+                                    </div>
+                            </div>
+                    </div>
+                    <div class="game-item" style="background-image: url('gamebg/bg10.jpg');">
+                            <span class="discount">-70%</span>
+                            <div class="overlay">
+                                    <div class="info-game">
+                                        <span style="color: white; font-size: 14px;">The Elsweyr</span>           
+                                        <span style="color: #EB7F02; font-size: 8px;"><del>1.700.000 VND</del></span>        
+                                        <span style="color: #EB7F02; font-size: 10px;">700.000 VND</span>
+                                    </div>
+                                    <div class="like-buy-game">
+                                        
+                                        <i style="color: red; margin-right: 10px; font-size: 12px;" class="fa fa-heart" aria-hidden="true"></i>
+                                        
+                                        <a href="">Thêm vào giỏ</a>
+                                    </div>
+                            </div>
+                    </div>
+                    <div class="game-item" style="background-image: url('gamebg/bg15.jpg');">
+                            <span class="discount">-70%</span>
+                            <div class="overlay">
+                                    <div class="info-game">
+                                        <span style="color: white; font-size: 14px;">God Of War</span>           
+                                        <span style="color: #EB7F02; font-size: 8px;"><del>1.700.000 VND</del></span>        
+                                        <span style="color: #EB7F02; font-size: 10px;">700.000 VND</span>
+                                    </div>
+                                    <div class="like-buy-game">
+                                        
+                                        <i style="color: red; margin-right: 10px; font-size: 12px;" class="fa fa-heart" aria-hidden="true"></i>
+                                        
+                                        <a href="">Thêm vào giỏ</a>
+                                    </div>
+                            </div>
+                    </div>
+                    <div class="game-item" style="background-image: url('gamebg/bg6.jpg');">
+                            <span class="discount">-70%</span>
+                            <div class="overlay">
+                                    <div class="info-game">
+                                        <span style="color: white; font-size: 14px;">Pirate's Treasure</span>           
+                                        <span style="color: #EB7F02; font-size: 8px;"><del>1.700.000 VND</del></span>        
+                                        <span style="color: #EB7F02; font-size: 10px;">700.000 VND</span>
+                                    </div>
+                                    <div class="like-buy-game">
+                                        
+                                        <i style="color: red; margin-right: 10px; font-size: 12px;" class="fa fa-heart" aria-hidden="true"></i>
+                                        
+                                        <a href="">Thêm vào giỏ</a>
+                                    </div>
+                            </div>
+                    </div>
+                    <div class="game-item" style="background-image: url('gamebg/bg7.png');">
+                            <span class="discount">-70%</span>
+                            <div class="overlay">
+                                    <div class="info-game">
+                                        <span style="color: white; font-size: 14px;">God Of War</span>           
+                                        <span style="color: #EB7F02; font-size: 8px;"><del>1.700.000 VND</del></span>        
+                                        <span style="color: #EB7F02; font-size: 10px;">700.000 VND</span>
+                                    </div>
+                                    <div class="like-buy-game">
+                                        
+                                        <i style="color: red; margin-right: 10px; font-size: 12px;" class="fa fa-heart" aria-hidden="true"></i>
+                                        
+                                        <a href="">Thêm vào giỏ</a>
+                                    </div>
+                            </div>
+                    </div>
+                </div> <!--end list-game-->
+                <div class="see-all">
+                    <span>XEM TẤT</span>
+                <i style="font-size:17px; margin-left: 5px;" class="fa fa-angle-double-right" aria-hidden="true"></i>
+            </div>
+        </div> <!--end content-moregame-->
+    </div> <!--end container-->
+
+    <div class="footer-container">
+        <div class="footer">
+            <div class="info">
+                <span>Thông tin</span><br>
+                <a href="#">Giới thiệu về Divine Shop</a><br>
+                <a href="#">Chính sách bảo mật</a><br>
+                <a href="#">Điều khoản dịch vụ</a>
+            </div>
+            <div class="service">
+                    <span>Chăm sóc khách hàng</span><br>
+                    <a href="#">Liên hệ</a><br>
+                    <a href="#">Chế độ bảo hành</a>
+            </div>
+            <div class="contact">
+                    <span>Liên hệ</span><br>
+                    <a href="#">Địa chỉ: 110 Trần Phú - hà Đông - Hà Nội</a><br>
+                    <a href="#">Hotline: 0974.947.421 (24/7)</a><br>
+                    <span>Kết nối</span>
+                    <div class="social-network">
+                        <img height="15px" width="15px" src="icon/facebook.png" style="margin-right: 10px; cursor: pointer;">
+                        <i style="color: white; font-size: 20px; margin-right: 10px; cursor: pointer;" class="fa fa-youtube-play" aria-hidden="true"></i>
+                        <img style="cursor: pointer;" height="15px" width="15px" src="icon/google.png">
+                    </div>
+            </div>
+            <div class="facebook">
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=300&height=300&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+                    style="border:none;overflow:hidden"
+                    scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            </div>
+        </div>
+        <span class="copyright">© Copyright 2019 DTS Group</span>
+    </div>
+</body>
+</span>
