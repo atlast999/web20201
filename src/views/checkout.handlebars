@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="http://localhost:3000/css/register.css">
+    <link rel="stylesheet" href="http://localhost:3000/css/checkout.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 </head>
 <body>
@@ -40,18 +40,18 @@
                 <input type="text" placeholder="Search game">
                 <i class="fa fa-search" aria-hidden="true"></i>
             </div>
-            {{!-- <div class="header-button">
-                <div class="download">
+            <div class="header-button">
+                {{!-- <div class="download">
                     <img style="background: none; margin-right: 4px;" width="12px" height="12px" src="icon/download.png">
                     <span>Tải phần mềm</span>
-                </div>
+                </div> --}}
                 <div class="account">
                     <div class="my-account">
-                        <img src="icon/avatar.png">
+                        <img src="http://localhost:3000/icon/avatar.png">
                         <span>My Account</span>
                         <div class="profile">
                             <div class="acc">
-                                <img src="icon/avatar.png">
+                                <img src="http://localhost:3000/icon/avatar.png">
                                 <div class="username">TuanlvEC</div>  
                             </div>                
                             <div class="balance">
@@ -88,45 +88,103 @@
                     <i style="color: #2CBCFC; margin-right: 5px;" class="fa fa-heart" aria-hidden="true"></i>
                     <span>Yêu thích</span>
                 </div>
-            </div> --}}
+            </div>
     
         </div> <!--end header-->
     </div> <!--end header-container-->
     <div class="support">
         <div class="tutorial">
-            <img width="35px" height="35px" src="icon/tutorial.png">
+            <img width="35px" height="35px" src="http://localhost:3000/icon/tutorial.png">
             <p>Hướng dẫn</p>
         </div>
         <div class="messenger">
-            <img width="35px" height="35px" src="icon/messenger.png">
+            <img width="35px" height="35px" src="http://localhost:3000/icon/messenger.png">
             <p>Hỗ trợ</p>
         </div>
     </div> <!--end support-->
     <div class="content-container">
         <div class="content-wraper">
-        	<div class="login">
-        		<form method="POST">
-                    <h6>Họ và tên</h6>
-                    <input id="full-name" type="text" name="fullName">
-        			<h6>Tên đăng nhập</h6>
-        			<input id="username" type="text" name="username">
-        			<h6>Mật khẩu</h6>
-        			<input id="password" type="password" name="password">
-                    <h6>Xác nhận mật khẩu</h6>
-                    <input id="verify-password" type="password" name="confirmPassword">
-                    <h6>Số điện thoại</h6>
-                    <input id="phone" type="text" name="phone">
-                    <h6>Email</h6>
-                    <input id="email" type="text" name="email">
-                    <h6>ID Steam</h6>
-                    <input id="id-steam" type="text" name="steamId">
-                    <h6>Địa chỉ</h6>
-                    <input id="address" type="text" name="address">
-                    <input type="submit" value="Đăng Ký">
-        			{{!-- <BUTTON>Đăng Ký</BUTTON> --}}
-                    {{!-- <BUTTON id="register-button">Đăng Nhập</BUTTON> --}}
-        		</form>
+        	<div class="cart">
+        		<h6>Đơn hàng của bạn</h6>
+        		<div class="product">
+        			<div class="img">
+        				<img src="http://localhost:3000/gamebg/bg1.jpg" alt="">
+        			</div>
+        			<div class="info">
+        				<h5 id="product-name">Metro Exodus V</h5>
+        			</div>
+        			<div class="quantity">      				
+        				<div class="p-container"><p id="product-quantity">1</p></div>
+        			</div>
+        			<div class="price">
+        				<p id="price">100.000 đ</p>       				
+        			</div>
+        		</div>
+
+        		<div class="product">
+        			<div class="img">
+        				<img src="http://localhost:3000/gamebg/bg2.jpg" alt="">
+        			</div>
+        			<div class="info">
+        				<h5 id="product-name">ROE IV</h5>
+        			</div>
+        			<div class="quantity">
+        				<div class="p-container"><p id="product-quantity">1</p></div>
+        			</div>
+        			<div class="price">
+        				<p id="price">99.000 đ</p>       				
+        			</div>
+        		</div>
+
+        		<div class="product">
+        			<div class="img">
+        				<img src="http://localhost:3000/gamebg/bg3.jpg" alt="">
+        			</div>
+        			<div class="info">
+        				<h5 id="product-name">Over Watch</h5>
+        			</div>
+        			<div class="quantity">
+        				<div class="p-container"><p id="product-quantity">1</p></div>
+        			</div>
+        			<div class="price">
+        				<p id="price">250.000 đ</p>       				
+        			</div>
+        		</div>
+
+        		<div class="total">
+        			<h3>Tổng cộng</h3>
+        			<p>980.000 đ</p>
+        		</div>
         	</div>
+            <div class="login">
+                <h6>Thông tin người nhận</h6>
+                <br>
+                <br>
+                <br>
+                <form>
+                    <h6>Họ và tên</h6>
+                    <input id="full-name" type="text" >
+                    <h6>Số điện thoại</h6>
+                    <input id="phone" type="text" >
+                    <h6>Địa chỉ</h6>
+                    <input id="address" type="text" >
+                    <h6>Email</h6>
+                    <input id="email" type="text" >
+                    <h6>ID Steam</h6>
+                    <input id="id-steam" type="text" >
+                    <h6>Ghi chú</h6>
+                    <input id="note" type="text" >
+                    <BUTTON>Thanh toán</BUTTON>
+                    <BUTTON id="register-button">Tiếp tục mua hàng</BUTTON>
+                    {{!-- <a href="http://localhost:3000/product/payment">
+                          <BUTTON>Thanh toán</BUTTON>
+                    </a>
+                    <a href="http://localhost:3000">
+                        <BUTTON id="register-button">Tiếp tục mua hàng</BUTTON>
+                    </a> --}}
+                    
+                </form>
+            </div>
         </div> 
     </div> <!--end content-container-->
 
@@ -149,7 +207,7 @@
                         <a href="#">Hotline: 0974.947.421 (24/7)</a><br>
                         <span>Kết nối</span>
                         <div class="social-network">
-                            <img height="15px" width="15px" src="icon/facebook.png" style="margin-right: 10px; cursor: pointer;">
+                            <img height="15px" width="15px" src="http://localhost:3000/icon/facebook.png" style="margin-right: 10px; cursor: pointer;">
                             <i style="color: white; font-size: 20px; margin-right: 10px; cursor: pointer;" class="fa fa-youtube-play" aria-hidden="true"></i>
                             <img style="cursor: pointer;" height="15px" width="15px" src="icon/google.png">
                         </div>
@@ -162,7 +220,7 @@
         </div>   
         <div class="footer-bottom">
             <span class="copyright">© Copyright 2019 DTS Group</span> 
-            <img src="icon/bct.png">
+            <img src="http://localhost:3000/icon/bct.png">
         </div>
     </div> <!--end footer-container-->
     

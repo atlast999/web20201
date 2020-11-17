@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://localhost:3000/css/detailStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+<body>
+    <div class="header-container">
+        <div class="header">
+            <div class="logo"></div>
+            <a href="http://localhost:3000/">
+            <div class="home">
+                <img src="http://localhost:3000/icon/home.png" style="margin-right: 2px;">
+                <span>Home</span>
+            </div>
+            </a>
+            <div class="wrapper-gametype">
+                    <div class="game-type">
+                            <img src="http://localhost:3000/icon/gamecata.png" style="margin-right: 4px;">
+                            <span>Thể loại game</span>
+                            <div class="gametype-item">
+                                    <a href="#">Hành động</a>
+                                    <a href="#">Puzzle</a>
+                                    <a href="#">Bắn súng</a>
+                                    <a href="#">Racing</a>
+                                    <a href="#">Game ARPG</a>
+                                    <a href="#">Casual</a>
+                                    <a href="#">Game RPG</a>
+                                    <a href="#">Strategy</a>
+                                    <a href="#">Sport</a>
+                                    <a href="#">Adventure</a>
+                            </div>
+                    </div>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search game">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+            <div class="header-button">
+                {{!-- <div class="download">
+                    <img style="background: none; margin-right: 4px;" width="12px" height="12px" src="icon/download.png">
+                    <span>Tải phần mềm</span>
+                </div> --}}
+                <div class="account">
+                    <div class="my-account">
+                        <img src="http://localhost:3000/icon/avatar.png">
+                        <span>My Account</span>
+                        <div class="profile">
+                            <div class="acc">
+                                <img src="http://localhost:3000/icon/avatar.png">
+                                <div class="username">TuanlvEC</div>  
+                            </div>                
+                            <div class="balance">
+                                <div class="available">
+                                    <span>Số dư khả dụng</span>
+                                    <span>300.000 đ</span>
+                                </div>               
+                                <div class="pendding">
+                                    <span>Số dư Pendding</span>
+                                    <span>700.000 đ</span>
+                                </div>
+                            </div>               
+                            <div class="nav">
+                                <a href="#">Quản lý shop</a>
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </div>
+                            <div class="nav">
+                                 <a href="#">Lịch sử giao dịch</a>
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </div>
+                            <div class="nav">
+                                <a href="#">Nạp tiền</a>
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </div>
+                            <div class="nav">
+                                <a href="#">Đăng xuất</a>
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </div>                               
+                        </div>
+                    </div>
+                </div>
+                <div class="favorite">
+                    <span class="badge">1</span>
+                    <i style="color: #2CBCFC; margin-right: 5px;" class="fa fa-heart" aria-hidden="true"></i>
+                    <span>Yêu thích</span>
+                </div>
+            </div>
+    
+        </div> <!--end header-->
+    </div> <!--end header-container-->
+    <div class="support">
+        <div class="tutorial">
+            <img width="35px" height="35px" src="http://localhost:3000/icon/tutorial.png">
+            <p>Hướng dẫn</p>
+        </div>
+        <div class="messenger">
+            <img width="35px" height="35px" src="http://localhost:3000/icon/messenger.png">
+            <p>Hỗ trợ</p>
+        </div>
+    </div> <!--end support-->
+    <div class="content-container">
+        <div class="video">
+            <div class="play">
+                    <i class="fa fa-play" aria-hidden="true"></i>
+            </div>
+            <div class="like">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                <span>Like 112K</span>
+            </div>
+            <div class="rental-block">
+                <img src="http://localhost:3000/gamebg/bgThumbnail2.png">
+                <div class="rental-info">
+                    <div class="title">
+                        <span style="color: white; font-size: 20px;">
+                            Ring Of Elysium
+                        </span>
+                        <span class="discount">-70%</span>
+                    </div>
+                    <div class="rate">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <span style="color: #EB7F02; font-size: 12px;"><del>1.700.000 VND</del></span>        
+                    <span style="color: #EB7F02; font-size: 16px;">700.000 VND</span>
+                    <div class="rent">
+                        <div class="rent-game"><a href="#">Thuê game</a></div>
+                        <div class="price"><a href="#">3.000đ/3h</a></div>
+                    </div>
+                </div>
+            </div>
+        </div> <!--end video-->
+        <div class="navigation">
+            <div style="flex-grow: 1;" class="active"><span>Chi tiết sản phẩm</span></div>
+            <div style="flex-grow: 1;"><span>Thông tin cấu hình</span></div>
+            <div style="flex-grow: 1;"><span>Đánh giá (0)</span></div>
+        </div> <!--end navigation-->
+        <div class="content-wraper">
+                <div class="game-info">
+                    <span>
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                    </span>
+                </div> <!--end game-info-->
+                <div class="more-games">
+                        <span class="same-type">Game cùng thể loại</span>
+                        <div class="list-game">
+                                <div class="game-item" style="background-image: url('gamebg/bg11.jpg');">
+                                    <span class="discount">-70%</span>
+                                    <div class="overlay">
+                                            <div class="info-game">
+                                                <span style="color: white; font-size: 14px;">Fortnite Battle Royale</span>           
+                                                <span style="color: #EB7F02; font-size: 8px;"><del>1.700.000 VND</del></span>        
+                                                <span style="color: #EB7F02; font-size: 10px;">700.000 VND</span>
+                                            </div>
+                                            <div class="like-buy-game">    
+                                                <i style="color: red; margin-right: 10px; font-size: 12px;" class="fa fa-heart" aria-hidden="true"></i>
+                                                <a href="">Thêm vào giỏ</a>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="game-item" style="background-image: url('gamebg/bg4.jpg');">
+                                    <span class="discount">-70%</span>
+                                    <div class="overlay">
+                                            <div class="info-game">
+                                                <span style="color: white; font-size: 14px;">Battlegrounds</span>           
+                                                <span style="color: #EB7F02; font-size: 8px;"><del>1.700.000 VND</del></span>        
+                                                <span style="color: #EB7F02; font-size: 10px;">700.000 VND</span>
+                                            </div>
+                                            <div class="like-buy-game">                                        
+                                                <i style="color: red; margin-right: 10px; font-size: 12px;" class="fa fa-heart" aria-hidden="true"></i>  
+                                                <a href="">Thêm vào giỏ</a>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="game-item" style="background-image: url('gamebg/bg10.jpg');">
+                                    <span class="discount">-70%</span>
+                                    <div class="overlay">
+                                        <div class="info-game">
+                                            <span style="color: white; font-size: 14px;">The Elsweyr</span>           
+                                            <span style="color: #EB7F02; font-size: 8px;"><del>1.700.000 VND</del></span>        
+                                            <span style="color: #EB7F02; font-size: 10px;">700.000 VND</span>
+                                        </div>
+                                        <div class="like-buy-game">
+                                            <i style="color: red; margin-right: 10px; font-size: 12px;" class="fa fa-heart" aria-hidden="true"></i> 
+                                            <a href="">Thêm vào giỏ</a>
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="game-item" style="background-image: url('gamebg/bg15.jpg');">
+                                        <span class="discount">-70%</span>
+                                        <div class="overlay">
+                                                <div class="info-game">
+                                                    <span style="color: white; font-size: 14px;">God Of War</span>           
+                                                    <span style="color: #EB7F02; font-size: 8px;"><del>1.700.000 VND</del></span>        
+                                                    <span style="color: #EB7F02; font-size: 10px;">700.000 VND</span>
+                                                </div>
+                                                <div class="like-buy-game">
+                                                    
+                                                    <i style="color: red; margin-right: 10px; font-size: 12px;" class="fa fa-heart" aria-hidden="true"></i>
+                                                    
+                                                    <a href="">Thêm vào giỏ</a>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="game-item" style="background-image: url('gamebg/bg6.jpg');">
+                                        <span class="discount">-70%</span>
+                                        <div class="overlay">
+                                                <div class="info-game">
+                                                    <span style="color: white; font-size: 14px;">Pirate's Treasure</span>           
+                                                    <span style="color: #EB7F02; font-size: 8px;"><del>1.700.000 VND</del></span>        
+                                                    <span style="color: #EB7F02; font-size: 10px;">700.000 VND</span>
+                                                </div>
+                                                <div class="like-buy-game">
+                                                    
+                                                    <i style="color: red; margin-right: 10px; font-size: 12px;" class="fa fa-heart" aria-hidden="true"></i>
+                                                    
+                                                    <a href="">Thêm vào giỏ</a>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="game-item" style="background-image: url('gamebg/bg7.png');">
+                                        <span class="discount">-70%</span>
+                                        <div class="overlay">
+                                                <div class="info-game">
+                                                    <span style="color: white; font-size: 14px;">God Of War</span>           
+                                                    <span style="color: #EB7F02; font-size: 8px;"><del>1.700.000 VND</del></span>        
+                                                    <span style="color: #EB7F02; font-size: 10px;">700.000 VND</span>
+                                                </div>
+                                                <div class="like-buy-game">
+                                                    
+                                                    <i style="color: red; margin-right: 10px; font-size: 12px;" class="fa fa-heart" aria-hidden="true"></i>
+                                                    
+                                                    <a href="">Thêm vào giỏ</a>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div> <!--end list-game-->
+                </div> <!--end more-games-->
+        </div>
+
+    </div> <!--end content-container-->
+
+    <div class="footer-container">
+        <div class="footer">
+                <div class="info">
+                    <span>Thông tin</span><br>
+                    <a href="#">Giới thiệu về Divine Shop</a><br>
+                    <a href="#">Chính sách bảo mật</a><br>
+                    <a href="#">Điều khoản dịch vụ</a>
+                </div>
+                <div class="service">
+                        <span>Chăm sóc khách hàng</span><br>
+                        <a href="#">Liên hệ</a><br>
+                        <a href="#">Chế độ bảo hành</a>
+                </div>
+                <div class="contact">
+                        <span>Liên hệ</span><br>
+                        <a href="#">Địa chỉ: 110 Trần Phú - hà Đông - Hà Nội</a><br>
+                        <a href="#">Hotline: 0974.947.421 (24/7)</a><br>
+                        <span>Kết nối</span>
+                        <div class="social-network">
+                            <img height="15px" width="15px" src="http://localhost:3000/icon/facebook.png" style="margin-right: 10px; cursor: pointer;">
+                            <i style="color: white; font-size: 20px; margin-right: 10px; cursor: pointer;" class="fa fa-youtube-play" aria-hidden="true"></i>
+                            <img style="cursor: pointer;" height="15px" width="15px" src="http://localhost:3000/icon/google.png">
+                        </div>
+                </div>
+                <div class="facebook">
+                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=300&height=300&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+                        style="border:none;overflow:hidden"
+                        scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                </div>
+        </div>   
+        <div class="footer-bottom">
+            <span class="copyright">© Copyright 2019 DTS Group</span> 
+            <img src="http://localhost:3000/icon/bct.png">
+        </div>
+    </div> <!--end footer-container-->
+    
+
+
+
+
+</body>
+</html>

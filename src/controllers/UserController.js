@@ -14,6 +14,11 @@ class UserController {
         res.render('register')
     }
 
+    //POST - register
+    register(req, res, next){
+        res.json(req.body)
+    }
+
 }
 
 module.exports = new UserController()

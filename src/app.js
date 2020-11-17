@@ -22,6 +22,9 @@ server.use('/', siteRouter)
 const userRouter = require('./routes/UserRouter')
 server.use('/account', userRouter)
 
+const productRouter = require('./routes/ProductRouter')
+server.use('/product', productRouter)
+
 const port = 3000
 server.listen(port, () => console.log('Server is running'))
 
