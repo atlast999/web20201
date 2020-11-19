@@ -1,9 +1,10 @@
 const express = require('express')
+const session = require('express-session')
 const path = require('path')
 
 const server = express() 
 
-
+//use handlebars template
 const exphbs  = require('express-handlebars')
 server.engine('handlebars', exphbs())
 server.set('views', path.join(__dirname, 'views'))
@@ -14,6 +15,11 @@ server.use(express.urlencoded({ extended: true }))
 
 server.use(express.static(path.join(__dirname, './../public')))
 
+server.use(session({
+    resave: true, 
+    saveUninitialized: true, 
+    secret: 'secret', 
+    cookie: { maxAge: 60000 }}))
 
 //routes
 const siteRouter = require('./routes/SiteRouter')

@@ -1,3 +1,4 @@
+const fetcher = require('axios')
 class UserController {
 
     //GET - login page
@@ -6,7 +7,16 @@ class UserController {
     }
     //POST - login
     login(req, res, next){
-        res.json(req.body)
+        if(!req.session.User || req.session.User.username != req.username){
+            res.json({error: 'User is not registered'})
+        }else{
+            res.render('home')
+            // fetcher.get('https://jsonplaceholder.typicode.com/photos/')
+            // .then(response => {
+            //     res.json(response)
+            // })
+            // .catch(next)
+        }
     }
 
     //GET - register page
@@ -16,6 +26,9 @@ class UserController {
 
     //POST - register
     register(req, res, next){
+        req.session.User = {
+            username: req.username
+        }
         res.json(req.body)
     }
 
