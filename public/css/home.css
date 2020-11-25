@@ -147,6 +147,91 @@ body {
     border-color: #2CBCFC;
     transition: border-color 0.5s;
 }
+
+.header-button .my-account img{
+    background: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 4px;
+}
+
+/*--------------PROFILE---------------*/
+.account {
+    position: relative;
+    height: inherit;
+    display: flex;
+    align-items: center;
+}
+.profile {
+    color: #2CBAFA;
+    visibility: hidden;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 205px;
+    padding: 10px;
+    background: linear-gradient(145deg, rgba(15,34,54,1) 0%, rgba(5,10,17,1) 100%);
+}
+.profile .acc {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.profile .acc img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.profile .acc .username {
+    font-size: 12px;
+}
+  
+.profile .balance{
+    border-bottom: 1px solid #195D82;
+}
+.profile .balance .available, .pendding {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.profile a {
+    text-decoration: none;
+    color: #2CBAFA;
+    font-size: 12px;
+}
+.profile .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0 10px 0;
+    border-bottom: 1px solid #195D82;
+}
+.profile .nav:hover {
+    background-color: #0D2237;
+}
+.profile .i {
+    color: #195D82;
+    font-size: 14px;
+}
+.account .download:hover {
+    border-color: red;
+    transition: border-color 0.5s;
+}
+.account .my-account:hover, .favorite:hover {
+    border-color: #2CBCFC;
+    transition: border-color 0.5s;
+}
+.account:hover .profile {
+    visibility: visible;
+    z-index: 2;
+    transition-delay: 0.2s;
+}
+
 /*--------BADGE NOTIFICATION---------*/
 .badge {
     position: absolute;

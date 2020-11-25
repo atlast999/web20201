@@ -41,19 +41,49 @@
                 <i class="fa fa-search" aria-hidden="true"></i>
             </div>
             <div class="header-button">
-                {{!-- <div class="download">
-                    <img style="background: none; margin-right: 4px;" width="12px" height="12px" src="icon/download.png">
-                    <span>Tải phần mềm</span>
-                </div> --}}
-                <a href="http://localhost:3000/account/login">
+
+                <div class="account">
+                {{#if user}}
                     <div class="my-account">
-                    <img style="background: none; margin-right: 4px;" width="12px" height="12px" src="icon/account.png">
-                    <span>My Account</span>
+                        <a href="http://localhost:3000/account/login">
+                            <img style="background: none; margin-right: 4px;" width="12px" height="12px" src="icon/account.png">
+                            <span>My Account</span>
+                        </a>
                     </div>
-                </a>
+                {{else}}
+                    <div class="my-account">
+                        <img src="http://localhost:3000/icon/avatar.png">
+                        <span>My Account</span>
+                        <div class="profile">
+                            <div class="acc">
+                                <img src="http://localhost:3000/icon/avatar.png">
+                                <div class="username">{{user.account}}</div>  
+                            </div>                  
+                            <div class="nav">
+                                <a href="#">Quản lý shop</a>
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </div>
+                            <div class="nav">
+                                 <a href="#">Lịch sử giao dịch</a>
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </div>
+                            <div class="nav">
+                                <a href="#">Nạp tiền</a>
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </div>
+                            <div class="nav">
+                                <a href="#">Đăng xuất</a>
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </div>                               
+                        </div>
+                    </div>
+
+                {{/if}}
+                </div>
+                
                 <a href="http://localhost:3000/product/cart">
                 <div class="cart">
-                    <span class="badge">1</span>
+                    <span class="badge">{{productsInCart}}</span>
                     <i style="color: #2CBCFC; margin-right: 5px;" class="fa fa-shopping-cart" aria-hidden="true"></i>
                     <span>Giỏ Hàng</span>
                 </div>
@@ -128,11 +158,33 @@
                 </div>
                 <!--end container-sort-->
                 <div class="content-main">
+
+                        {{#each listProduct}}
+                            <div class="game-item" style="background-image: url('gamebg/bg11.jpg');">
+                                <span class="discount">-70%</span>
+                                <div class="overlay">
+                                        <div class="info-game">
+                                            <span style="color: white; font-size: 14px;">{{this.name}}</span>           
+                                            <span style="color: #EB7F02; font-size: 8px;"><del>{{this.price}}</del></span>        
+                                            <span style="color: #EB7F02; font-size: 10px;">700.000 VND</span>
+                                        </div>
+                                        <div class="like-buy-game">
+                                            
+                                            <i style="color: red; margin-right: 10px; font-size: 12px;" class="fa fa-heart" aria-hidden="true"></i>
+                                            
+                                            <a href={{addToCart this.id}}>Thêm vào giỏ</a>
+                                        </div>
+                                </div>
+                        </div>
+                        {{/each}}
+
                         <div class="game-item" style="background-image: url('gamebg/bg11.jpg');">
                                 <span class="discount">-70%</span>
                                 <div class="overlay">
                                         <div class="info-game">
-                                            <span style="color: white; font-size: 14px;">Fortnite Battle Royale</span>           
+                                            <a href="/product">
+                                                <span style="color: white; font-size: 14px;">Fortnite Battle Royale</span>           
+                                            </a>
                                             <span style="color: #EB7F02; font-size: 8px;"><del>1.700.000 VND</del></span>        
                                             <span style="color: #EB7F02; font-size: 10px;">700.000 VND</span>
                                         </div>
@@ -140,10 +192,11 @@
                                             
                                             <i style="color: red; margin-right: 10px; font-size: 12px;" class="fa fa-heart" aria-hidden="true"></i>
                                             
-                                            <a href="">Thêm vào giỏ</a>
+                                            <a href={{addToCart 20}}>Thêm vào giỏ</a>
                                         </div>
                                 </div>
                         </div>
+                    
                         <div class="game-item" style="background-image: url('gamebg/bg4.jpg');">
                                 <span class="discount">-70%</span>
                                 <div class="overlay">

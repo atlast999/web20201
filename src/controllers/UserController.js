@@ -1,4 +1,6 @@
 const fetcher = require('axios')
+const api = require('../config/Config')
+
 class UserController {
 
     //GET - login page
@@ -7,16 +9,21 @@ class UserController {
     }
     //POST - login
     login(req, res, next){
-        if(!req.session.User || req.session.User.username != req.username){
-            res.json({error: 'User is not registered'})
-        }else{
-            res.render('home')
-            // fetcher.get('https://jsonplaceholder.typicode.com/photos/')
-            // .then(response => {
-            //     res.json(response)
-            // })
-            // .catch(next)
-        }
+        fetcher.post(api.login, {
+            params: {
+                username: req.username,
+                password: req.password,
+            }
+        })
+        .then(response => {
+            //check res
+            req.session.User = {
+                account: req.username,
+                userID: response.userID
+            }
+            res.redirect('/')
+        })
+        .catch(next)
     }
 
     //GET - register page
@@ -26,10 +33,15 @@ class UserController {
 
     //POST - register
     register(req, res, next){
-        req.session.User = {
-            username: req.username
-        }
-        res.json(req.body)
+        fetcher.post(api.register, {
+            params: {
+                username: req.username,
+            }
+        })
+        .then(response => {
+            //check res code
+            res.redirect('/')
+        })
     }
 
 }
