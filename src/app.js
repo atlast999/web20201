@@ -8,7 +8,9 @@ const server = express()
 const exphbs  = require('express-handlebars')
 server.engine('handlebars', exphbs({
     helpers: {
-        addToCart: (productId) => '/product/cart/addProduct/' + productId
+        addToCart: (productId) => 'http://localhost:3000/product/cart/addProduct/' + productId,
+        gameImage: (productId) => 'http://localhost:3000/gamebg/bg' + productId + '.jpg',
+        gameDetail: (productId) => 'http://localhost:3000/product/' + productId,
     }
 }))
 server.set('views', path.join(__dirname, 'views'))

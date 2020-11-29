@@ -116,7 +116,7 @@
                 <div class="rental-info">
                     <div class="title">
                         <span style="color: white; font-size: 20px;">
-                            Ring Of Elysium
+                            {{product.name}}
                         </span>
                         <span class="discount">-70%</span>
                     </div>
@@ -127,11 +127,10 @@
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
                     </div>
-                    <span style="color: #EB7F02; font-size: 12px;"><del>1.700.000 VND</del></span>        
-                    <span style="color: #EB7F02; font-size: 16px;">700.000 VND</span>
+                    <span style="color: #EB7F02; font-size: 12px;"><del>{{product.price}}</del></span>        
+                    <span style="color: #EB7F02; font-size: 16px;">{{product.price}}</span>
                     <div class="rent">
-                        <div class="rent-game"><a href="#">Thuê game</a></div>
-                        <div class="price"><a href="#">3.000đ/3h</a></div>
+                        <div class="rent-game"><a href="#">Mua game</a></div>
                     </div>
                 </div>
             </div>
@@ -144,7 +143,7 @@
         <div class="content-wraper">
                 <div class="game-info">
                     <span>
-                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                        {{product.description}}
                     </span>
                 </div> <!--end game-info-->
                 <div class="more-games">

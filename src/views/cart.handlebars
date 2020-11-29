@@ -106,24 +106,28 @@
         <div class="content-wraper">
         	<div class="cart">
         		<h6>Giỏ hàng của bạn</h6>
-        		<div class="product">
+
+                {{#each listProduct}}
+                    <div class="product">
         			<div class="img">
-        				<img src="http://localhost:3000/gamebg/bg1.jpg" alt="">
+        				<img src={{gameImage this.id}} alt="">
         			</div>
         			<div class="info">
-        				<h5 id="product-name">Metro Exodus V</h5>
+        				<h5 id="product-name">{{this.name}}</h5>
         			</div>
         			<div class="quantity">
         				<div class="button-container"><button><p>+</p></button></div>
-        				<div class="p-container"><p id="product-quantity">1</p></div>
+        				<div class="p-container"><p id="product-quantity">{{this.quantity}}</p></div>
         				<div class="button-container button-container-right"><button><p>-</p></button></div>
         			</div>
         			<div class="price">
-        				<p id="price">100.000 đ</p>       				
+        				<p id="price">{{this.price}}</p>       				
         			</div>
-        		</div>
+        		    </div>
+                {{/each}}
+        		
 
-        		<div class="product">
+        		{{!-- <div class="product">
         			<div class="img">
         				<img src="http://localhost:3000/gamebg/bg2.jpg" alt="">
         			</div>
@@ -155,7 +159,7 @@
         			<div class="price">
         				<p id="price">250.000 đ</p>       				
         			</div>
-        		</div>
+        		</div> --}}
 
         		<div class="total">
         			<h3>Tổng cộng</h3>

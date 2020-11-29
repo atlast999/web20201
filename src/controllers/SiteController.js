@@ -7,19 +7,17 @@ class SiteController {
     homePage(req, res, next){
         const user = req.session.User
         if(user){
-            axios.get(api.productsInCart, {
-                params: {
-                    userID: user.userID
-                }
+            fetcher.post(api.productsInCart, {
+                userId: user.userId
               })
               .then(response => {
                   //check res code
                   fetcher.get(api.allProducts)
                   .then(pResponse => {
                       //check
-                      res.render('home', {user: user, productsInCart: response.listProductInCart.size, listProduct: pResponse.listProduct})
+                      res.render('home', {user: user, productsInCart: response.data.listProduct.length, listProduct: pResponse.data.listProduct})
                   })
-                
+                  .catch(next)
               })
               .catch(next)
         } else{

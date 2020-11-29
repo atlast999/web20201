@@ -10,18 +10,19 @@ class UserController {
     //POST - login
     login(req, res, next){
         fetcher.post(api.login, {
-            params: {
-                username: req.username,
-                password: req.password,
-            }
+            account: req.body.username,
+            password: req.body.password,
         })
         .then(response => {
-            //check res
-            req.session.User = {
-                account: req.username,
-                userID: response.userID
+            // check res
+            if(response.data.code == 200){
+                req.session.User = {
+                    account: req.body.username,
+                    userId: response.data.userId
+                }
             }
-            res.redirect('/')
+            
+            res.redirect('http://localhost:3000')
         })
         .catch(next)
     }
@@ -33,15 +34,24 @@ class UserController {
 
     //POST - register
     register(req, res, next){
+        console.log(req.body)
         fetcher.post(api.register, {
-            params: {
-                username: req.username,
-            }
+            account: req.body.username,
+            fullName: req.body.fullName,
+            password: req.body.password,
+            phone: req.body.phone,
+            email: req.body.email,
+            address: req.body.address
         })
         .then(response => {
             //check res code
-            res.redirect('/')
+            if(response.data.code == 200){
+                res.redirect('http://localhost:3000/account/login')
+            } else {
+                res.json(response.data)
+            }
         })
+        .catch(next)
     }
 
 }
