@@ -11,7 +11,8 @@ class ProductController {
             id: productID
         })
         .then(response => {
-            res.render('detail', {product: response.data.listProduct[0]})
+            console.log('at detail: ', response.data)
+            res.render('detail', {product: response.data.content[0]})
         })
         .catch(next)
         
@@ -25,11 +26,12 @@ class ProductController {
                 userId: user.userId
             })
             .then(response => {
-                res.render('cart', {listProduct: response.data.listProduct})
+                console.log('at card: ', response.data)
+                res.render('cart', {listProduct: response.data.content})
             })
             .catch(next)
         } else {
-            response.json({error: 'not logged in!'})
+            res.json({error: 'not logged in!'})
         }
     }
 
@@ -40,17 +42,35 @@ class ProductController {
             userId: user.userId
         })
         .then(response => {
-            res.render('checkout', {listProduct: response.data.listProduct})
+            console.log('at card: ', response.data)
+            res.render('checkout', {listProduct: response.data.content})
+        })
+        .catch(next)
+    }
+
+    //POST confirm payment
+    confirmPayment(req, res, next){
+        const user = req.session.User
+        fetcher.post(api.defaultPayment, {
+            userId: user.userId
+        })
+        .then(response => {
+            console.log('at confirm payment: ', response.data)
+            res.json(response)
         })
         .catch(next)
     }
 
     //GET - add to cart
     addToCart(req, res, next){
-        const userID = req.session.User.userId
+        const user = req.session.User
+        if(!user){
+            res.json({error: 'not logged in'})
+            return
+        }
         const productID = req.params.productId
         fetcher.post(api.addProducts, {
-            userId: userID,
+            userId: user.userId,
             productId: productID,
             type: 'add'
         })
@@ -60,6 +80,8 @@ class ProductController {
         })
         
     }
+
+
 
 }
 

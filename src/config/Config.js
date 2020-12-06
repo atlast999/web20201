@@ -10,4 +10,5 @@ module.exports = {
     productDetail : 'http://localhost:8081/cnweb2020/api-get-product-detail',
     defaultPayment : 'http://localhost:8081/cnweb2020/api-checkout-with-default-info',
     explicitPayment : 'http://localhost:8081/cnweb2020/api-checkout-with-new-info',
+    search: 'http://localhost:8081/cnweb2020/api-find-product-by-name',
 }

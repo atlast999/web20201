@@ -14,15 +14,18 @@ class UserController {
             password: req.body.password,
         })
         .then(response => {
+            console.log('at login: ', response.data)
             // check res
             if(response.data.code == 200){
                 req.session.User = {
                     account: req.body.username,
-                    userId: response.data.userId
+                    userId: response.data.content.userId
                 }
+                res.redirect('http://localhost:3000')
+            } else {
+                res.json(response.data)
             }
             
-            res.redirect('http://localhost:3000')
         })
         .catch(next)
     }
@@ -34,7 +37,6 @@ class UserController {
 
     //POST - register
     register(req, res, next){
-        console.log(req.body)
         fetcher.post(api.register, {
             account: req.body.username,
             fullName: req.body.fullName,
@@ -45,6 +47,7 @@ class UserController {
         })
         .then(response => {
             //check res code
+            console.log('at register: ', response.data)
             if(response.data.code == 200){
                 res.redirect('http://localhost:3000/account/login')
             } else {

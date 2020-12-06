@@ -6,23 +6,58 @@ class SiteController {
     //GET - homepage
     homePage(req, res, next){
         const user = req.session.User
-        if(user){
-            fetcher.post(api.productsInCart, {
-                userId: user.userId
-              })
-              .then(response => {
-                  //check res code
-                  fetcher.get(api.allProducts)
-                  .then(pResponse => {
+        fetcher.get(api.allProducts)
+                .then(pResponse => {
+                    console.log('at all products: ', pResponse.data)
                       //check
-                      res.render('home', {user: user, productsInCart: response.data.listProduct.length, listProduct: pResponse.data.listProduct})
-                  })
-                  .catch(next)
-              })
-              .catch(next)
-        } else{
-            res.render('home', {user: false})
-        }
+                    if(user){
+                        fetcher.post(api.productsInCart, {
+                            userId: user.userId
+                          })
+                          .then(response => {
+                            console.log('at in cart: ', response.data)
+                              //check res code
+                              var inCart = 0
+                              if(response.data.code == 200){
+                                  inCart = response.data.content.length
+                              }
+                              res.render('home', {user: user, productsInCart: inCart, listProduct: pResponse.data.content})
+                          })
+                          .catch(next)
+                    } else{
+                        res.render('home', {user: false, listProduct: pResponse.data.content})
+                    }
+                })
+                .catch(next)
+    }
+
+    search(req, res, next){
+        const user = req.session.User
+        fetcher.post(api.search, {
+            name: req.body.name,
+        })
+        .then(pResponse => {
+            console.log('at search products: ', pResponse.data)
+                      //check
+                    if(user){
+                        fetcher.post(api.productsInCart, {
+                            userId: user.userId
+                          })
+                          .then(response => {
+                            console.log('at in cart: ', response.data)
+                              //check res code
+                              var inCart = 0
+                              if(response.data.code == 200){
+                                  inCart = response.data.content.length
+                              }
+                              res.render('home', {user: user, productsInCart: inCart, listProduct: pResponse.data.content})
+                          })
+                          .catch(next)
+                    } else{
+                        res.render('home', {user: false, listProduct: pResponse.data.content})
+                    }
+        })
+        .catch(next)
     }
 }
 

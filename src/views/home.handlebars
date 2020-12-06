@@ -37,8 +37,11 @@
                         </div>
             </div>
             <div class="search">
-                <input type="text" placeholder="Search game">
-                <i class="fa fa-search" aria-hidden="true"></i>
+                <form action="http://localhost:3000/search" method="POST">
+                    <input type="text" placeholder="Search game" name="name">
+                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </form>
+                
             </div>
             <div class="header-button">
 
@@ -376,7 +379,7 @@
                                 </div>
                         </div>                   --}}
                 </div> <!--end content-main-->
-                <div class="pagination">
+                {{!-- <div class="pagination">
                     <a class="active" href="#">1</a>
                     <a href="#">2</a>
                     <a href="#">3</a>
@@ -384,7 +387,7 @@
                     <span style="color: white;">...</span>
                     <a href="#">16</a>
                     <a href="#">Next</a>
-                </div> <!--end pagination-->
+                </div> <!--end pagination--> --}}
             </div>
             <div class="top-game">
                 <div class="active-div"><span>Top thuê game nhiều</span></div>
