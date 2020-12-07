@@ -17,7 +17,6 @@ body {
 }
 .header {
     display: flex;
-    justify-content: center;
     align-items: center;
     height: 60px;
     max-width: 900px;
@@ -123,7 +122,8 @@ body {
     justify-content: center;
     font-size: 12px;
     cursor: pointer;
-    width: 100px;
+    width: 130px;
+    height: 30px;
     padding: 5px 5px;
     border: 1px solid #195D82;
     text-align: center;
@@ -420,7 +420,6 @@ body {
 .container .content .content-main {
     margin-top: 80px;
     display: grid;
-    height: 700px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 20px;
@@ -433,7 +432,7 @@ body {
     justify-content: center;
     align-items:flex-end;
     width: 100%;
-    height: 100%;
+    height: 150px;
     background-image: url('gamebg/bg5.jpg');
     background-position: center;
     background-size: cover;
