@@ -3,6 +3,15 @@ const api = require('../config/Config')
 
 class ProductController {
 
+    //authenticatting midleware
+    authenticate(req, res, next){
+        const user = req.session.User
+        if(user){
+            next()
+        }else{
+            res.redirect('http://localhost:3000/account/login')
+        }
+    }
 
     //GET - product detail
     getDetail(req, res, next){
@@ -21,18 +30,33 @@ class ProductController {
     //GET - show cart
     showCart(req, res, next){
         const user = req.session.User
-        if(user){
             fetcher.post(api.productsInCart, {
                 userId: user.userId
             })
             .then(response => {
                 console.log('at card: ', response.data)
-                res.render('cart', {listProduct: response.data.content})
+                const listProducts = response.data.content
+                var total = 0
+                listProducts.forEach(product => total += product.price * product.quantity)
+                res.render('cart', {listProduct: listProducts, totalPrice: total})
             })
             .catch(next)
-        } else {
-            res.json({error: 'not logged in!'})
-        }
+    }
+
+    //POST - edit cart
+    editCart(req, res, next){
+        const user = req.session.User
+        const productID = req.params.productId
+        const updateType = req.body.action
+        fetcher.post(api.updateProducts, {
+            userId: user.userId,
+            productId: productID,
+            type: updateType
+        })
+        .then(response => {
+            //check
+            res.redirect('http://localhost:3000/product/cart')
+        })
     }
 
     //GET - show payment
@@ -43,7 +67,10 @@ class ProductController {
         })
         .then(response => {
             console.log('at card: ', response.data)
-            res.render('checkout', {listProduct: response.data.content})
+            const listProducts = response.data.content
+            var total = 0
+            listProducts.forEach(product => total += product.price * product.quantity)
+            res.render('checkout', {listProduct: listProducts, totalPrice: total})
         })
         .catch(next)
     }
@@ -51,12 +78,17 @@ class ProductController {
     //POST confirm payment
     confirmPayment(req, res, next){
         const user = req.session.User
+        const paymentType = req.body.payment
+        if(paymentType == 'cancel'){
+            res.redirect('http://localhost:3000/')
+            return
+        }
         fetcher.post(api.defaultPayment, {
             userId: user.userId
         })
         .then(response => {
             console.log('at confirm payment: ', response.data)
-            res.json(response)
+            res.json(response.data)
         })
         .catch(next)
     }
@@ -64,12 +96,8 @@ class ProductController {
     //GET - add to cart
     addToCart(req, res, next){
         const user = req.session.User
-        if(!user){
-            res.json({error: 'not logged in'})
-            return
-        }
         const productID = req.params.productId
-        fetcher.post(api.addProducts, {
+        fetcher.post(api.updateProducts, {
             userId: user.userId,
             productId: productID,
             type: 'add'

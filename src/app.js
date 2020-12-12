@@ -11,6 +11,7 @@ server.engine('handlebars', exphbs({
         addToCart: (productId) => 'http://localhost:3000/product/cart/addProduct/' + productId,
         gameImage: (productId) => 'http://localhost:3000/gamebg/bg' + productId + '.jpg',
         gameDetail: (productId) => 'http://localhost:3000/product/' + productId,
+        updateCart: (productId) => 'http://localhost:3000/product/cart/' + productId,
     }
 }))
 server.set('views', path.join(__dirname, 'views'))

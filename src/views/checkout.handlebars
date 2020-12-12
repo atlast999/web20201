@@ -122,41 +122,10 @@
         			</div>
         		</div>
                 {{/each}}
-        		
-
-        		{{!-- <div class="product">
-        			<div class="img">
-        				<img src="http://localhost:3000/gamebg/bg2.jpg" alt="">
-        			</div>
-        			<div class="info">
-        				<h5 id="product-name">ROE IV</h5>
-        			</div>
-        			<div class="quantity">
-        				<div class="p-container"><p id="product-quantity">1</p></div>
-        			</div>
-        			<div class="price">
-        				<p id="price">99.000 đ</p>       				
-        			</div>
-        		</div>
-
-        		<div class="product">
-        			<div class="img">
-        				<img src="http://localhost:3000/gamebg/bg3.jpg" alt="">
-        			</div>
-        			<div class="info">
-        				<h5 id="product-name">Over Watch</h5>
-        			</div>
-        			<div class="quantity">
-        				<div class="p-container"><p id="product-quantity">1</p></div>
-        			</div>
-        			<div class="price">
-        				<p id="price">250.000 đ</p>       				
-        			</div>
-        		</div> --}}
 
         		<div class="total">
         			<h3>Tổng cộng</h3>
-        			<p>980.000 đ</p>
+        			<p>{{totalPrice}} đ</p>
         		</div>
         	</div>
             <div class="login">
@@ -164,7 +133,7 @@
                 <br>
                 <br>
                 <br>
-                <form>
+                <form action="http://localhost:3000/product/payment" method="POST">
                     <h6>Họ và tên</h6>
                     <input id="full-name" type="text" >
                     <h6>Số điện thoại</h6>
@@ -177,15 +146,8 @@
                     <input id="id-steam" type="text" >
                     <h6>Ghi chú</h6>
                     <input id="note" type="text" >
-                    <BUTTON>Thanh toán</BUTTON>
-                    <BUTTON id="register-button">Tiếp tục mua hàng</BUTTON>
-                    {{!-- <a href="http://localhost:3000/product/payment">
-                          <BUTTON>Thanh toán</BUTTON>
-                    </a>
-                    <a href="http://localhost:3000">
-                        <BUTTON id="register-button">Tiếp tục mua hàng</BUTTON>
-                    </a> --}}
-                    
+                    <button name="payment" value="confirm">Thanh toán</button>
+                    <button name="payment" value="cancel">Tiếp tục mua hàng</button>
                 </form>
             </div>
         </div> 
