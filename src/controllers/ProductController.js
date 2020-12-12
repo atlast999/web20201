@@ -38,7 +38,7 @@ class ProductController {
                 const listProducts = response.data.content
                 var total = 0
                 listProducts.forEach(product => total += product.price * product.quantity)
-                res.render('cart', {listProduct: listProducts, totalPrice: total})
+                res.render('cart', {listProduct: listProducts, totalPrice: total.toLocaleString()})
             })
             .catch(next)
     }
@@ -66,11 +66,11 @@ class ProductController {
             userId: user.userId
         })
         .then(response => {
-            console.log('at card: ', response.data)
+            console.log('at payment: ', response.data)
             const listProducts = response.data.content
             var total = 0
             listProducts.forEach(product => total += product.price * product.quantity)
-            res.render('checkout', {listProduct: listProducts, totalPrice: total})
+            res.render('checkout', {listProduct: listProducts, totalPrice: total.toLocaleString()})
         })
         .catch(next)
     }
@@ -88,7 +88,8 @@ class ProductController {
         })
         .then(response => {
             console.log('at confirm payment: ', response.data)
-            res.json(response.data)
+            // if(response.data.)
+            res.render('success-payment')
         })
         .catch(next)
     }

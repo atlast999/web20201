@@ -112,7 +112,7 @@
                 <span>Like 112K</span>
             </div>
             <div class="rental-block">
-                <img src="http://localhost:3000/gamebg/bgThumbnail2.png">
+                <img src={{gameImage product.image}}>
                 <div class="rental-info">
                     <div class="title">
                         <span style="color: white; font-size: 20px;">
@@ -127,10 +127,15 @@
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
                     </div>
-                    <span style="color: #EB7F02; font-size: 12px;"><del>{{product.price}}</del></span>        
+                    {{!-- <span style="color: #EB7F02; font-size: 12px;"><del>{{product.price}}</del></span>         --}}
                     <span style="color: #EB7F02; font-size: 16px;">{{product.price}}</span>
                     <div class="rent">
-                        <div class="rent-game"><a href="#">Mua game</a></div>
+                        <div class="rent-game">
+                            <form action={{updateCart product.id}} method="post">
+                                <button name="action" value="add">Mua game</button>
+                            </form>
+                            {{!-- <a href="#">Mua game</a> --}}
+                            </div>
                     </div>
                 </div>
             </div>
@@ -223,7 +228,7 @@
                                                 </div>
                                         </div>
                                 </div>
-                                <div class="game-item" style="background-image: url('http://localhost:3000/gamebg/bg7.png');">
+                                <div class="game-item" style="background-image: url('http://localhost:3000/gamebg/bg7.jpd');">
                                         <span class="discount">-70%</span>
                                         <div class="overlay">
                                                 <div class="info-game">
