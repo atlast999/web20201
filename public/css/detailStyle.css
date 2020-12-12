@@ -352,13 +352,14 @@ body {
 .rent-game {
     margin-right: 2px;
 }
-.rental-info .rent a{
+.rental-info .rent button{
     text-decoration: none;
     font-size: 14px;
     color: white;
     padding: 6px 14px;
-    border: 1px solid white;
+    border: 1px solid #54BCFA;
     border-radius: 2px;
+    background-color: #54BCFA; 
 }
 .rent-game:hover a, .price:hover a{
     color: #2CBAFA;

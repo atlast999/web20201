@@ -543,14 +543,14 @@ body {
     margin-top: 50px;
     margin-bottom: 50px;
 }
-.login input {
+.login .input {
     margin-top: 10px;
     margin-bottom: 20px;
     width: 100%;
     height: 30px;
     border-radius: 5px;
 }
-.login button {
+.login .button {
     padding: 15px;
     background-color: #34BCFA;
     color: #FFFFFF;
@@ -560,11 +560,10 @@ body {
     font-size: 18px;
     margin-top: 20px;
     display: inline-block;
-    width: 50%;
+    width: 100%;
 }
 #register-button{
-    background-color: #0D1C2D;
-    color: #34BCFA;
-    float: right;
+    background-color: #54BCFA;
+    color: #FFFFFF;
 }
 

@@ -11,7 +11,7 @@
 <body>
     <div class="header-container">
         <div class="header">
-            <div class="logo"></div>
+            <div class="logo" style="background-image: url(http://localhost:3000/icon/logo.png)"></div>
             <a href="http://localhost:3000/">
             <div class="home">
                 <img src="http://localhost:3000/icon/home.png" style="margin-right: 2px;">
@@ -132,7 +132,7 @@
                     <div class="rent">
                         <div class="rent-game">
                             <form action={{updateCart product.id}} method="post">
-                                <button name="action" value="add">Mua game</button>
+                                <button id="buy" name="action" value="add">Mua game</button>
                             </form>
                             {{!-- <a href="#">Mua game</a> --}}
                             </div>
