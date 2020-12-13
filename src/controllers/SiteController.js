@@ -34,7 +34,7 @@ class SiteController {
     search(req, res, next){
         const user = req.session.User
         fetcher.post(api.search, {
-            name: req.body.name,
+            name: req.body.name.trim(),
         })
         .then(pResponse => {
             console.log('at search products: ', pResponse.data)

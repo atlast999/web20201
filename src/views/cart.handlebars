@@ -129,7 +129,7 @@
                         </div>
         			</div>
         			<div class="price">
-        				<p id="price">{{this.price}}</p>       				
+        				<p id="price">{{gamePrice this.price}}</p>       				
         			</div>
         		    </div>
                 {{/each}}
@@ -139,9 +139,15 @@
         			<h3>Tổng cộng</h3>
         			<p>{{totalPrice}} đ</p>
         		</div>
-        		<a href="http://localhost:3000/product/payment">
+                {{#if listProduct}}
+        		    <a href="http://localhost:3000/product/payment">
                           <BUTTON>Thanh toán</BUTTON>
-                </a>
+                    </a>
+                {{else}}
+                    <a href="http://localhost:3000/">
+                          <BUTTON>Quay lại trang chủ</BUTTON>
+                    </a>
+                {{/if}}
         	</div>
         </div> 
     </div> <!--end content-container-->
