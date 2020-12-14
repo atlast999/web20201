@@ -131,6 +131,7 @@ body {
     border-radius: 5px;
     margin-right: 5px;
 }
+
 .header-button .cart {
     position: relative;
 }
@@ -633,4 +634,9 @@ body {
     font-size: 12px;
     bottom: -20px;
     left: 0;
+}
+#account-info {
+    color: #2ABAFA;
+    text-decoration: none;
+    margin-top:2px;
 }
