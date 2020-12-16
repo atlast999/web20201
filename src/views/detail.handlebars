@@ -41,29 +41,16 @@
                 <i class="fa fa-search" aria-hidden="true"></i>
             </div>
             <div class="header-button">
-                {{!-- <div class="download">
-                    <img style="background: none; margin-right: 4px;" width="12px" height="12px" src="icon/download.png">
-                    <span>Tải phần mềm</span>
-                </div> --}}
                 <div class="account">
+                {{#if user}}
                     <div class="my-account">
                         <img src="http://localhost:3000/icon/avatar.png">
                         <span>My Account</span>
                         <div class="profile">
                             <div class="acc">
                                 <img src="http://localhost:3000/icon/avatar.png">
-                                <div class="username">TuanlvEC</div>  
-                            </div>                
-                            <div class="balance">
-                                <div class="available">
-                                    <span>Số dư khả dụng</span>
-                                    <span>300.000 đ</span>
-                                </div>               
-                                <div class="pendding">
-                                    <span>Số dư Pendding</span>
-                                    <span>700.000 đ</span>
-                                </div>
-                            </div>               
+                                <div class="username">{{user.account}}</div>  
+                            </div>                  
                             <div class="nav">
                                 <a href="#">Quản lý shop</a>
                                 <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -82,13 +69,24 @@
                             </div>                               
                         </div>
                     </div>
+                    
+                {{else}}
+                    <div class="my-account">
+                        <img style="background: none; margin-right: 4px;" width="12px" height="12px" src="http://localhost:3000/icon/account.png">
+                        <a id="account-info"  href="http://localhost:3000/account/login">
+                            <span>Đăng nhập</span>
+                        </a>
+                    </div>
+                {{/if}}
                 </div>
-                <div class="favorite">
-                    <span class="badge">1</span>
-                    <i style="color: #2CBCFC; margin-right: 5px;" class="fa fa-heart" aria-hidden="true"></i>
-                    <span>Yêu thích</span>
+                
+                <a href="http://localhost:3000/product/cart">
+                <div class="cart">
+                    <span class="badge">{{productsInCart}}</span>
+                    <i style="color: #2CBCFC; margin-right: 5px;" class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <span>Giỏ Hàng</span>
                 </div>
-            </div>
+                </a>
     
         </div> <!--end header-->
     </div> <!--end header-container-->
@@ -103,7 +101,7 @@
         </div>
     </div> <!--end support-->
     <div class="content-container">
-        <div class="video">
+        <div class="video" style="background-image: url({{gameImage product.id}});">
             <div class="play">
                     <i class="fa fa-play" aria-hidden="true"></i>
             </div>
@@ -112,7 +110,7 @@
                 <span>Like 112K</span>
             </div>
             <div class="rental-block">
-                <img src={{gameImage product.image}}>
+                <img src="http://localhost:3000/gamebg/bgThumbnail.jpg">
                 <div class="rental-info">
                     <div class="title">
                         <span style="color: white; font-size: 20px;">
