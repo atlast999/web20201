@@ -700,12 +700,27 @@ body {
     font-size: 18px;
     margin-top: 20px;
     display: inline-block;
-    width: 50%;
+    width: 49%;
 }
 #register-button{
     background-color: #0D1C2D;
     color: #34BCFA;
     float: right;
 }
-
-
+h5 {
+    font-size: 30px;
+    color: #FFFFFF;
+    font-weight: normal;
+    margin-bottom: 50px;
+}
+.select-type label {
+    color: #FFFFFF;
+    margin-right: 50px;
+    margin-left: 10px;
+}
+.default-info-area form h6 {
+    margin-bottom: 15px;
+}
+.hidden {
+    display: none;
+}

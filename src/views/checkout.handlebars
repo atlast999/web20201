@@ -128,7 +128,30 @@
         			<p>{{totalPrice}} đ</p>
         		</div>
         	</div>
-            <div class="login">
+            <h5>Chọn hình thức giao hàng</h5>
+            <form class="select-type">
+                <input id="default-info" onchange="change()" name="info-type" checked="1" type="radio" value="default-info" />
+                <label for="default-info">Đặt hàng với thông tin mặc định</label>
+                <input id="new-info" onchange="change()" name="info-type" type="radio" value="new-info" />
+                <label for="new-info">Đặt hàng với thông tin mới</label>
+            </form>
+
+            <div class="login default-info-area">
+                <h6>Thông tin người nhận</h6>
+                <br>
+                <br>
+                <br>
+                <form action="http://localhost:3000/product/payment" method="POST">
+                    <h6>Họ và tên: </h6>
+                    <h6>Số điện thoại: </h6>
+                    <h6>Địa chỉ: </h6>
+                    <h6>Email: </h6>
+                    <button name="payment" value="confirm">Thanh toán</button>
+                    <button name="payment" value="cancel">Tiếp tục mua hàng</button>
+                </form>
+            </div>
+
+            <div class="login new-info-area">
                 <h6>Thông tin người nhận</h6>
                 <br>
                 <br>
@@ -189,9 +212,22 @@
         </div>
     </div> <!--end footer-container-->
     
-
-
-
-
+    <script>
+    function change(){
+    var radios = document.getElementsByName('info-type');
+    var elements, elseElement;
+    if(radios[0].checked){
+        elements = document.getElementsByClassName('new-info-area');
+        elseElement = document.getElementsByClassName('default-info-area');
+    }
+    else{
+        elements = document.getElementsByClassName('default-info-area');
+        elseElement = document.getElementsByClassName('new-info-area');
+    }
+    elements[0].classList.add('hidden');
+    elseElement[0].classList.remove("hidden");
+    }
+    change();
+    </script>
 </body>
 </html>
