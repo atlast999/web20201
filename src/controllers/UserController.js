@@ -49,7 +49,7 @@ class UserController {
             //check res code
             console.log('at register: ', response.data)
             if(response.data.code == 200){
-                res.redirect('http://localhost:3000/account/login')
+                res.render('success-register')
             } else {
                 res.json(response.data)
             }

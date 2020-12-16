@@ -48,7 +48,7 @@
                 {{#if user}}
                     <div class="my-account">
                         <img src="http://localhost:3000/icon/avatar.png">
-                        <span>My Account</span>
+                        <span>{{user.account}}</span>
                         <div class="profile">
                             <div class="acc">
                                 <img src="http://localhost:3000/icon/avatar.png">
@@ -122,30 +122,19 @@
     <div class="container">
             <div class="menu">
                 <span style="padding: 8px 16px; color: #35BEFC;">GAME FLATFORM</span>
-                <div class="steam flex menu-active">
-                    <img width="20px" height="20px" src="icon/steam.png">
-                    <span>Steam</span>
+                {{#each listCategory}}
+                    {{{selectedClass this ../selectedCategory}}}
+                    <img width="20px" height="20px" src={{categoryImage this}}>
+                    <a href={{categoryLink this}}>
+                        <span>{{this}}</span>
+                    </a>
                 </div>
-                <div class="origin flex">
-                    <img width="20px" height="20px" src="icon/Origin.png">
-                    <span>Origin</span>
-                </div>
-                <div class="uplay flex">
-                    <img width="20px" height="20px" src="icon/Uplay-icon.png">
-                    <span>Uplay</span>
-                </div>
-                <div class="ubiisoft flex">
-                    <img width="25px" height="20px" src="icon/Ubiisoft_logo.png">
-                    <span>Ubiisoft</span>
-                </div>
-                <div class="gog flex">
-                    <img width="20px" height="20px"src="icon/steam.png">
-                    <span>GOG</span>
-                </div>
-                <div class="blizzard flex">
-                    <img width="50px" height="30px" src="icon/blizzard.png">
-                    <span>Blizzard</span>
-                </div>
+                {{/each}}
+
+                
+
+                
+
             </div>
             <div class="content">
                 {{!-- <div class="container-sort">

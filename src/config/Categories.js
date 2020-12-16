@@ -1,0 +1,1 @@
+module.exports = ['steam', 'origin', 'uplay', 'ubiisoft', 'gog', 'blizzard']

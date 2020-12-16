@@ -111,10 +111,13 @@
         			<h6>Mật khẩu</h6>
         			<input required="1" class="input" id="password" type="password" name="password">
                     <input class="button" type="submit" value="Đăng nhập">
-                    <input id="register-button" class="button"type="submit" value="Đăng ký" 
+                    {{!-- <input id="register-button" class="button"type="submit" value="Đăng ký" 
                         formmethod="GET"
-                        formaction="http://localhost:3000/account/register"> 
+                        formaction="http://localhost:3000/account/register">  --}}
         		</form>
+                <form action="http://localhost:3000/account/register">
+                    <input id="register-button" class="button"type="submit" value="Đăng ký"> 
+                </form>
         	</div>
         </div> 
     </div> <!--end content-container-->

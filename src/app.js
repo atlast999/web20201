@@ -13,7 +13,20 @@ server.engine('handlebars', exphbs({
         gameDetail: (productId) => 'http://localhost:3000/product/' + productId,
         updateCart: (productId) => 'http://localhost:3000/product/cart/' + productId,
         gamePrice: (productPrice) => productPrice.toLocaleString(),
-        
+        selectedClass: (category, selected) => 
+        {
+            // console.log('cate: ' + category + ' sele: ' + selected)
+            if(category == selected) {
+                return '<div class="' + category + ' flex menu-active">'
+            }
+            return '<div class="' + category + ' flex">'
+        }
+        ,
+        categoryImage: (category) => 'http://localhost:3000/icon/' + category + '.png',
+        categoryLink: (category) => 'http://localhost:3000/' + category,
+        testSelected: (selectedCate) => {
+            console.log(selectedCate)
+        }
     }
 }))
 server.set('views', path.join(__dirname, 'views'))
