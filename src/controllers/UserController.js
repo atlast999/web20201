@@ -23,7 +23,7 @@ class UserController {
                 }
                 res.redirect('http://localhost:3000')
             } else {
-                res.json(response.data)
+                res.render('login', {loginStatus: response.data.message})
             }
             
         })
@@ -51,7 +51,7 @@ class UserController {
             if(response.data.code == 200){
                 res.render('success-register')
             } else {
-                res.json(response.data)
+                res.render('register', {registerStatus: response.data.message})
             }
         })
         .catch(next)

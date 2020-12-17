@@ -105,6 +105,7 @@
     <div class="content-container">
         <div class="content-wraper">
         	<div class="login">
+                <span id="login_status">{{loginStatus}}</span>
         		<form method="POST">
         			<h6>Tên đăng nhập</h6>
         			<input required="1" class="input" id="username" type="text" name="username">
@@ -158,7 +159,12 @@
         </div>
     </div> <!--end footer-container-->
     
-
+    <script>
+        const status = document.getElementById("login_status").innerHTML
+        if(status){
+            alert(status)
+        }
+    </script>
 
 
 

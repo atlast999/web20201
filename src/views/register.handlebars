@@ -56,6 +56,7 @@
     <div class="content-container">
         <div class="content-wraper">
         	<div class="login">
+                <span id="register_status">{{registerStatus}}</span>
         		<form method="POST">
                     <h6>Họ và tên</h6>
                     <input required="1" class="input" id="full-name" type="text" name="fullName">
@@ -114,7 +115,12 @@
     </div> <!--end footer-container-->
     
 
-
+    <script>
+        const status = document.getElementById("register_status").innerHTML
+        if(status){
+            alert(status)
+        }
+    </script>
 
 
 </body>
