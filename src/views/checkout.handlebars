@@ -142,10 +142,10 @@
                 <br>
                 <br>
                 <form action="http://localhost:3000/product/payment" method="POST">
-                    <h6>Họ và tên: </h6>
-                    <h6>Số điện thoại: </h6>
-                    <h6>Địa chỉ: </h6>
-                    <h6>Email: </h6>
+                    <h6>Họ và tên: {{user.fullName}}</h6>
+                    <h6>Số điện thoại: {{user.phone}}</h6>
+                    <h6>Địa chỉ: {{user.address}}</h6>
+                    <h6>Email: {{user.email}}</h6>
                     <button name="payment" value="confirm">Thanh toán</button>
                     <button name="payment" value="cancel">Tiếp tục mua hàng</button>
                 </form>
@@ -156,17 +156,15 @@
                 <br>
                 <br>
                 <br>
-                <form action="http://localhost:3000/product/payment" method="POST">
+                <form action="http://localhost:3000/product/payment-new-info" method="POST">
                     <h6>Họ và tên</h6>
-                    <input required="1" id="full-name" type="text" >
+                    <input required="1" id="full-name" type="text" name="personTakeOrder" value={{user.fullName}}>
                     <h6>Số điện thoại</h6>
-                    <input required="1" id="phone" type="text" >
+                    <input required="1" id="phone" type="text" name="phone" value={{user.phone}}>
                     <h6>Địa chỉ</h6>
-                    <input required="1" id="address" type="text" >
+                    <input required="1" id="address" type="text" name="address" value={{user.address}}>
                     <h6>Email</h6>
-                    <input required="1" id="email" type="text" >
-                    <h6>ID Steam</h6>
-                    <input required="1" id="id-steam" type="text" >
+                    <input required="1" id="email" type="text" value={{user.email}}>
                     <h6>Ghi chú</h6>
                     <input id="note" type="text" >
                     <button name="payment" value="confirm">Thanh toán</button>

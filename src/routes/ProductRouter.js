@@ -17,6 +17,9 @@ router.get('/payment',productController.authenticate, productController.showPaym
 //POST - confirm payment
 router.post('/payment', productController.authenticate, productController.confirmPayment)
 
+//POST - confirm payment new info
+router.post('/payment-new-info', productController.authenticate, productController.confirmPaymentNewInfo)
+
 //GET - add to cart
 router.get('/cart/addProduct/:productId',productController.authenticate, productController.addToCart)
 

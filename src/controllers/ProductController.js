@@ -70,7 +70,13 @@ class ProductController {
             const listProducts = response.data.content
             var total = 0
             listProducts.forEach(product => total += product.price * product.quantity)
-            res.render('checkout', {listProduct: listProducts, totalPrice: total.toLocaleString()})
+            fetcher.post(api.userInfo, {
+                id: user.userId
+            })
+            .then(responseUser => {
+                res.render('checkout', {listProduct: listProducts, totalPrice: total.toLocaleString(), user: responseUser.data.content})
+            })
+            .catch(next)
         })
         .catch(next)
     }
@@ -93,6 +99,27 @@ class ProductController {
         })
         .catch(next)
     }
+
+    //POST confirm payment new info
+    confirmPaymentNewInfo(req, res, next){
+        const user = req.session.User
+        const paymentType = req.body.payment
+        if(paymentType == 'cancel'){
+            res.redirect('http://localhost:3000/')
+            return
+        }
+        var body = req.body
+        body.userId = user.userId
+        delete body.payment
+        fetcher.post(api.defaultPayment, body)
+        .then(response => {
+            console.log('at confirm payment new info: ', response.data)
+            // if(response.data.)
+            res.render('success-payment')
+        })
+        .catch(next)
+    }
+
 
     //GET - add to cart
     addToCart(req, res, next){
