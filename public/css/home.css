@@ -41,7 +41,6 @@ body {
 .wrapper-gametype {
     display: flex;
     align-items: center;
-    height: inherit;
     position: relative;
 }
 .header .game-type {
@@ -55,13 +54,14 @@ body {
 .gametype-item {
     visibility: hidden;
     position: absolute;
-    top: 50px;
+    top: 15px;
     left: 0;
     width: 300px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;  
     background: linear-gradient(90deg, rgba(17,39,62,1) 0%, rgba(3,6,11,1) 100%);
+    height: 100px;
 }
 .wrapper-gametype:hover .gametype-item {
     visibility: visible;
@@ -639,4 +639,11 @@ body {
     color: #2ABAFA;
     text-decoration: none;
     margin-top:2px;
+}
+a {
+    text-decoration: none;
+}
+a span {
+    color: #32BEFC;
+    text-transform: capitalize;
 }
