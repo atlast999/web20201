@@ -23,72 +23,19 @@
                             <img src="http://localhost:3000/icon/gamecata.png" style="margin-right: 4px;">
                             <span>Thể loại game</span>
                             <div class="gametype-item">
-                                    <a href="#">Hành động</a>
-                                    <a href="#">Puzzle</a>
-                                    <a href="#">Bắn súng</a>
-                                    <a href="#">Racing</a>
-                                    <a href="#">Game ARPG</a>
-                                    <a href="#">Casual</a>
-                                    <a href="#">Game RPG</a>
-                                    <a href="#">Strategy</a>
-                                    <a href="#">Sport</a>
-                                    <a href="#">Adventure</a>
-                            </div>
-                    </div>
+                                    <a href="http://localhost:3000/steam">Steam</a>
+                                    <a href="http://localhost:3000/origin">Origin</a>
+                                    <a href="http://localhost:3000/uplay">Uplay</a>
+                                    <a href="http://localhost:3000/gog">Gog</a>
+                                    <a href="http://localhost:3000/ubiisoft">Ubiisoft</a>
+                                    <a href="http://localhost:3000/blizzard">Blizzard</a>
+                                </div>
+                        </div>
             </div>
             <div class="search">
                 <input type="text" placeholder="Search game">
                 <i class="fa fa-search" aria-hidden="true"></i>
             </div>
-            <div class="header-button">
-                <div class="account">
-                {{#if user}}
-                    <div class="my-account">
-                        <img src="http://localhost:3000/icon/avatar.png">
-                        <span>My Account</span>
-                        <div class="profile">
-                            <div class="acc">
-                                <img src="http://localhost:3000/icon/avatar.png">
-                                <div class="username">{{user.account}}</div>  
-                            </div>                  
-                            <div class="nav">
-                                <a href="#">Quản lý shop</a>
-                                <i class="fa fa-angle-right" aria-hidden="true"></i>
-                            </div>
-                            <div class="nav">
-                                 <a href="#">Lịch sử giao dịch</a>
-                                <i class="fa fa-angle-right" aria-hidden="true"></i>
-                            </div>
-                            <div class="nav">
-                                <a href="#">Nạp tiền</a>
-                                <i class="fa fa-angle-right" aria-hidden="true"></i>
-                            </div>
-                            <div class="nav">
-                                <a href="#">Đăng xuất</a>
-                                <i class="fa fa-angle-right" aria-hidden="true"></i>
-                            </div>                               
-                        </div>
-                    </div>
-                    
-                {{else}}
-                    <div class="my-account">
-                        <img style="background: none; margin-right: 4px;" width="12px" height="12px" src="http://localhost:3000/icon/account.png">
-                        <a id="account-info"  href="http://localhost:3000/account/login">
-                            <span>Đăng nhập</span>
-                        </a>
-                    </div>
-                {{/if}}
-                </div>
-                
-                <a href="http://localhost:3000/product/cart">
-                <div class="cart">
-                    <span class="badge">{{productsInCart}}</span>
-                    <i style="color: #2CBCFC; margin-right: 5px;" class="fa fa-shopping-cart" aria-hidden="true"></i>
-                    <span>Giỏ Hàng</span>
-                </div>
-                </a>
-    
-        </div> <!--end header-->
     </div> <!--end header-container-->
     <div class="support">
         <div class="tutorial">

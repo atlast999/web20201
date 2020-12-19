@@ -566,4 +566,11 @@ body {
     background-color: #54BCFA;
     color: #FFFFFF;
 }
+a {
+    text-decoration: none;
+}
+a span {
+    color: #32BEFC;
+    text-transform: capitalize;
+}
 

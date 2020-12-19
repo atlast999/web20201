@@ -86,7 +86,7 @@ class SiteController {
                               if(response.data.code == 200){
                                   inCart = response.data.content.length
                               }
-                              res.render('home', {user: user, productsInCart: inCart, listProduct: pResponse.data.content})
+                              res.render('home', {user: user, productsInCart: inCart, listProduct: pResponse.data.content, listCategory: listCategory, selectedCategory: selectedCategory})
                           })
                           .catch(next)
                     } else{

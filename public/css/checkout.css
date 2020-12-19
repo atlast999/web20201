@@ -54,6 +54,7 @@ body {
 .gametype-item {
     visibility: hidden;
     position: absolute;
+    height: 100px;
     top: 50px;
     left: 0;
     width: 300px;
@@ -723,4 +724,11 @@ h5 {
 }
 .hidden {
     display: none;
+}
+a {
+    text-decoration: none;
+}
+a span {
+    color: #32BEFC;
+    text-transform: capitalize;
 }
