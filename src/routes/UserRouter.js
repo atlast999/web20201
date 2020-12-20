@@ -15,4 +15,7 @@ router.get('/register', userController.showRegister)
 //POST - register
 router.post('/register', userController.register)
 
+//gET - log out
+router.get('/logout', userController.logout)
+
 module.exports = router

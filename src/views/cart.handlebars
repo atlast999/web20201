@@ -79,11 +79,19 @@
                         </div>
                     </div>
                 </div>
+                <a href="http://localhost:3000/product/cart">
                 <div class="favorite">
+                    <span class="badge">{{productsInCart}}</span>
+                    <i style="color: #2CBCFC; margin-right: 5px;" class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <span>Giỏ Hàng</span>
+                </div>
+                </a>
+
+                {{!-- <div class="favorite">
                     <span class="badge">1</span>
                     <i style="color: #2CBCFC; margin-right: 5px;" class="fa fa-heart" aria-hidden="true"></i>
                     <span>Yêu thích</span>
-                </div>
+                </div> --}}
             </div>
     
         </div> <!--end header-->
@@ -180,7 +188,6 @@
         </div>   
         <div class="footer-bottom">
             <span class="copyright">© Copyright 2020 Big-city Boys</span> 
-            <img src="http://localhost:3000/icon/bct.png">
         </div>
     </div> <!--end footer-container-->
     
