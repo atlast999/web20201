@@ -564,6 +564,7 @@ body {
     margin-top: 20px;
     display: inline-block;
     width: 50%;
+    margin-left: 49%;
 }
 #register-button{
     background-color: #0D1C2D;
@@ -612,7 +613,7 @@ body {
     display: inline-block;
     font-size: 18px;
     color: #FFFFFF;
-    margin-left: 7px;
+    margin-left: 23px;
 }
 .button-container button{
     width: 30px;
