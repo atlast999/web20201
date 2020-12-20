@@ -38,7 +38,7 @@ class ProductController {
                 const listProducts = response.data.content
                 var total = 0
                 listProducts.forEach(product => total += product.price * product.quantity)
-                res.render('cart', {listProduct: listProducts, totalPrice: total.toLocaleString(), productsInCart: listProducts.length})
+                res.render('cart', {listProduct: listProducts, totalPrice: total.toLocaleString(), productsInCart: listProducts.length, user: user})
             })
             .catch(next)
     }
